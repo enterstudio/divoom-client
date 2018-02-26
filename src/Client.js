@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Swatch from './Swatch';
 import {postToDivoom} from "./divoomAdapterHelper";
 import './Client.css';
+import UploadImage from "./UploadImage";
 
 class Client extends Component {
 
@@ -128,6 +129,7 @@ class Client extends Component {
         </table>
         <h3>Options</h3>
         <button onClick={this.clearPixels}>Clear Pixels</button>
+        <UploadImage onUpload={this.updatePixelArray}/>
         <button onClick={this.toggleData}>{showData ? "Hide" : "Show"} Data</button>
         <br/>
         {showData && ([
